@@ -1,0 +1,269 @@
+/* --------------------
+ Global Reset & Fonts
+---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:wght@400..700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --------------------
+ Header & Navbar
+---------------------*/
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* --------------------
+ Main Wrapper
+---------------------*/
+main {
+  flex: 1;
+  width: 95%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Sections */
+section {
+  margin-bottom: 30px;
+}
+
+section h3 {
+  margin-bottom: 10px;
+  color: #444;
+  border-bottom: 2px solid #ff9800;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* --------------------
+ Work Experience
+---------------------*/
+.workexperience a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.workexperience a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------
+ Reviews / Testimonials
+---------------------*/
+.views {
+  background: #f1f1f1;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.views p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.views h3 {
+  font-size: 14px;
+  color: #555;
+}
+
+/* --------------------
+ Footer
+---------------------*/
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* --------------------
+ Contact Form
+---------------------*/
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 5px rgba(255,152,0,0.5);
+}
+
+form button {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #e68900;
+}
+
+/* --------------------
+ Articles / Blog
+---------------------*/
+.articles {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.articles article {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.articles article:hover {
+  transform: translateY(-5px);
+}
+
+.articles h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.articles p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.articles a {
+  display: inline-block;
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.articles a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------
+ Responsive Design
+---------------------*/
+
+/* Tablets (iPad, 768px and above) */
+@media (min-width: 768px) {
+  .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large screens (Desktop, 1024px and above) */
+@media (min-width: 1024px) {
+  nav a {
+    margin: 0 20px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Small devices (phones like Redmi 13C, 480px and below) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
